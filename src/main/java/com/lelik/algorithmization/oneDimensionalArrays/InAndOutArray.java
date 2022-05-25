@@ -8,7 +8,7 @@ public class InAndOutArray {
     public static void fillingIntWithConsole(int[] arr) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         for (int i = 0; i < arr.length; i++) {
-            System.out.println("Input element number" + i);
+            System.out.println("Input element number" + (i+1));
             arr[i] = Integer.parseInt(reader.readLine());
         }
 
@@ -17,7 +17,7 @@ public class InAndOutArray {
     public static void fillingDoubleWithConsole(double[] arr) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         for (int i = 0; i < arr.length; i++) {
-            System.out.println("Input element number" + i);
+            System.out.println("Input element number" + (i+1));
             arr[i] = Double.parseDouble(reader.readLine());
         }
 
