@@ -14,7 +14,8 @@ public class Task1 {
         System.out.println("Input array lenght");
         int n  = Integer.parseInt(reader.readLine());
         int[] arr = new int[n];
-        ArrayFilling.fillingIntWithConsole(arr);
+        InAndOutArray.fillingIntWithConsole(arr);
+        InAndOutArray.outArray(arr);
         int summ =0;
         for (int i : arr) {
             if (i % k == 0)summ+=i;
