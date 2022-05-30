@@ -15,25 +15,24 @@ public class Task9 {
         InAndOutArray.fillingIntWithConsole(arr);
         InAndOutArray.outArray(arr);
         System.out.println();
-        int [] res = new int[arr.length];
-        for (int i = 0; i < arr.length; i++) {
-            int count =0;
-            for (int j = i+1; j < arr.length-i; j++) {
-                if(arr[i]==arr[j])count++;
+        int [] arrNumberOfRepetitions = new int[arr.length];
+        for (int i = 0; i < arr.length ; i++) {
+            int count = 0;
+            for (int a : arr) {
+               if (arr[i] == a)count++;
             }
-            res[i] = count;
+            arrNumberOfRepetitions[i] = count;
         }
-        int max = res[0];
-        int indexMax =0;
-        for (int i = 1; i < res.length-1; i++) {
-            if (max<res[i]){
-                indexMax=res[i];
-                max = res[i];
-
-            }
+        int maxRepetitions = arrNumberOfRepetitions[0];
+        int maxIndex = 0;
+        for (int i = 0; i < arrNumberOfRepetitions.length; i++) {
+            if (arrNumberOfRepetitions[i]>maxRepetitions)maxRepetitions=arrNumberOfRepetitions[i];
+            maxIndex = i;
         }
-        int maxArr = arr[indexMax];
-        System.out.println(maxArr);
+        int minValue =arr[maxIndex];
+        for (int i = 0; i < arrNumberOfRepetitions.length; i++) {
+            if (maxRepetitions==arrNumberOfRepetitions[i] && minValue<arr[i])minValue=arr[i];
+        }
+        System.out.println(minValue);
     }
-
 }
