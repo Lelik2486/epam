@@ -1,5 +1,7 @@
 package com.lelik.algorithmization.matrix;
 
+/*Сформировать квадратную матрицу порядка n по заданному образцу(n - четное)*/
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
